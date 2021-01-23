@@ -1,0 +1,8 @@
+first name,last name,email
+john,smith,john@example.com
+drew,neil,drew@vimcasts.org
+jane,doe,jane@example.com
+
+:2,$!sort -t ',' -k2 表示从第二行还是排序，排序依据是以','为分隔符，取分隔后的第一个字符为限
+直接在光标后普通模式下 输入!G 则会选中当前行到最后一行并进入命令模式 
+

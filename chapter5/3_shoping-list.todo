@@ -1,0 +1,18 @@
+Shopping list
+	Hardware Store
+		Buy new hammer 
+	Beauty Parlor 
+		Buy nail polish remover 
+		Buy nails
+
+:6copy. 复制第6行到当前行下面
+可以始终t来提到copy
+例如 
+:6t.  复制第六行到当前行
+:t6   把当前行复制到第6行下方
+:t.   为当前行创建一个副本
+:t$   把当前行复制到结尾
+:'<,'>t0  把当前选中行复制到行首
+:m    表示移动到哪里
+
+

@@ -1,0 +1,8 @@
+li.one　　a{ background-image: url('/components/sprite.png'); }
+li.two　　a{ background-image: url('/components/sprite.png'); } 
+li.three  a{ background-image: url('/components/sprite.png'); }
+
+<C-v>jje  选中下面的3行，e选中一个单词
+c  change
+然后输入改变的内容
+esc 后就会同时显示

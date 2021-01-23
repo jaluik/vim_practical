@@ -1,0 +1,12 @@
+...We're waiting for content before the site can go live...
+...If you are content with this, let's go ahead with it...
+...We'll launch as soon as we have the content...
+
+* 命令可以查看当前光标下的单词
+:set hls 可以显示所有的匹配高亮
+n 可以跳到下一个匹配项
+*nn 会遍历所有的匹配项
+cw 命令会删除光标当前位置到结尾间的字符 然后进入插入模式。
+Vim 会把我们离开插入之前的全部案件操作都记录下来
+此时再执行. 操作就会重复之前的操作
+

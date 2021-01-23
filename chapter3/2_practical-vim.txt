@@ -1,0 +1,8 @@
+Practical Vim, by Drew Neil
+Read Drew Neil's  Practical Vim
+
+
+yt, 复制, 前面的内容到寄存器，这里就是Practical Vim
+jA  下移一行到行尾进入插入模式
+<C-r>0 复制刚才寄存器到内容
+

@@ -1,0 +1,8 @@
+The end is the 
+
+db 命令删除从光标起始位置到单词开头的内容
+x 删除当前字符
+b 移动到单词的开头
+dw 删除一个单词
+daw delete a word 可以直接删除
+daw 配合. 可以执行重复操作

@@ -1,0 +1,10 @@
+Line one
+Line two
+Line three
+Line four
+
+
+dd 命令删除行
+. 重复执行上一次命令
+>G 缩进
+j 下移

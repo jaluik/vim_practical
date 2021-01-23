@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head><title>Practical Vim</title></head>
+	<body><h1>Practical Vim</h1></body>
+</html>
+
+执行:3d 会删除第三行
+执行:2,5p 会打印2-5行的内容  
+其中. 可以代表当前行
+% 代表当前文件的所有行
+这个:%等价于 :1,$命令
+:%s/Practical/Process/ 可以全局替换Practical为Process
+:'<,'>p 标记其实位置和终止位置'< 是代表高亮选区首行的位置标记，'>是代表高亮选区的最后一行
+
+Vim 也接受以模式作为一条 Ex 命令的地址
+:/<html>/,/<\/html>/p 可以用正则来选中内容
+并且这个模式可以增加偏移量
+
+:/<html>/+1,/<\/html>/-1p 这个就不会包含初始行和最后一行
+
+偏移行一般表示为 :{address}+n
+如果n缺失，则默认为1
+

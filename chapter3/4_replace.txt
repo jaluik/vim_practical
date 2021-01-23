@@ -1,0 +1,6 @@
+Typing in Insert mode extends the line. But in Replace mode
+the line length doesn't change.
+
+
+
+

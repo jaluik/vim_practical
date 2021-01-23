@@ -1,0 +1,8 @@
+This is a word March to replace.
+
+
+viw 可以高亮选中的内容
+进入 visual mode 以后使用c会删除当前选中内容，然后进入插入模式
+
+<C-g> 可以进入选择模式,选择模式的作用在于可以直接删除选中内容并进入插入模式
+

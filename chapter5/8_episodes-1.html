@@ -1,0 +1,32 @@
+<ol>
+	<li>
+		<a href="/episodes/show-invisibles/">
+			Show invisibles
+		</a>
+	</li>
+	<li>
+		<a href="/episodes/tabs-and-spaces/">
+			Tabs and Spaces
+		</a>
+	</li>
+</ol>
+
+现在我们想批量这里这个文件
+使得生成文件格式如下
+前面是内容  后面是链接地址
+
+Show invisibles: http://vimcasts.org/episodes/show-invisibles/
+Tabs and Spaces: http://vimcasts.org/episodes/tabs-and-spaces/
+
+执行命令如下
+:g/href/j
+:v/href/d
+:%norm A: http://vimcasts.org
+:%norm yi"$p
+:%s/\v^[^\>]+\>\s//g
+
+也可以把命令存入到 batch.vim 脚本里面，脚本中到每一行都会当作Ex命令进行执行
+
+可以批量执行 使用:argdo source batch.vim 可以对每个打开对文件执行 batch.vim里面对脚本操作
+
+

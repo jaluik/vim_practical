@@ -1,0 +1,8 @@
+.blog .news{ background-image: url(/sprite.png);}
+.blog {background-position: 0px 0px}
+.news {background-position: -180px 0px}
+
+yyp 复制一行
+cW 删除当前字符并插入
+180<C-x> 找到最近的数字减少180次
+180<C-a> 找到最近的数字加180次
