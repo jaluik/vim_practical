@@ -1,0 +1,20 @@
+使用vim *.txt 可以打开多个匹配到文件 
+进入以后  执行:ls 可以查看打开的所有缓冲区的内容
+:bnext 可以切换到下一个打开的文件中
+:bprev 可以切换到上一个打开的文件
+:bfirst 可以跳到列表的开头
+:blast  可以跳到列表的结尾
+:buffer N 可以切换到第N个文件缓冲区
+:buffer {filename} 也可以切换到名称为filename的文件缓冲区
+:bdelete N1 N2 可以删除第N1和N2的缓冲区
+:N,M bdelete 可以指定删除的范围
+bdelete 可以简写为bd
+<C-^> 可以自动在几个文件中切换
+
+:args 直接输入时会显示当前缓冲区内的文件列表
+:args {arglist} 可以设置参数列表的内容  arglist可以是文件名，通配符，甚至是shell命令的输出结果
+
+:args {glob模式} glob模式包括使用 * 代表当前匹配， ** 代表多层目录匹配
+:args `cat .chapters` 注意使用反引号来表示一段shell脚本
+
+参数列表（:args）相比于缓冲区列表{:ls} 更易管理一些
