@@ -1,0 +1,26 @@
+e.g. we're going too slow
+Find the first occurrence of {char} and move to it.
+I've Benn expecting you, Mister Bond.
+
+
+f{char} 会在当前光标位置和行尾位置查找指定的字符
+如果查找到了字符 则会跳到查找字符到位置，否则保持不动
+f{char} 搜索完成后执行; 会重复执行搜索命令, 如果跳过了可以使用, 来进行回退
+
+vim 拥有一个<Leader> 可以作为用户自定义命令的名字空间
+noremap <Leader>n nzz
+缺省的<Leader>键是\, 因此可以使用\n 开处方上面的nzz命令
+
+f{char} 正向移动到下一个{char} 所在之处
+F{char} 反向移动到上一个{char} 所在之处
+t{char} 正向移动到下一个{char} 所在之处的前一个字符上
+T{char} 反向移动到上一个{char} 所在之处的后一个字符上
+; 重复上次的查找命令
+, 反转方向查找上次的字符查找命令
+--------------
+
+针对第3行
+首先执行f, 光标会跳转到, 到位置
+接下来执行dt. 便可以删除, 到 。前面到位置
+
+
