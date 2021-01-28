@@ -1,0 +1,20 @@
+search for your target
+it only takes a moment
+to get where you want
+
+This phrase takes time but
+eventually gets to the point.
+
+/ta 可以直接在普通模式下搜索到ta相关的单词
+如果不匹配 n 可以跳转到下一个匹配到内容, N可以撤回到上一个匹配到内容
+
+针对第二段文字
+如果我想删除takes ... gets 整段到内容
+首先 /takes 移动到第二段
+然后v 进入可视模式
+/ge<Enter> 光标跳到匹配gets的地方
+h 回移一个字符
+d 命令删除
+
+还可以在光标定位到takes的时候
+直接执行 d/ge<Enter>  这个命令告诉 d{motion}删除什么，并且不会包含匹配到的字符
