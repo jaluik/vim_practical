@@ -1,0 +1,15 @@
+
+const a = require("../chapter8/1")
+
+
+:set suffixesadd+=.rb
+可以指定自动补充跳转路径全路径名称
+在使用<C-O> 调回来	
+
+如果想指定搜索路径的话可以指定path
+比如 :set path? 可以查看当前path设置的值
+
+:vimgrep /fooBar/ **   vimgrep命令可以全局搜索匹配的项目并进行跳转
+
+一般来说，要养成在使用与quickfix列表有关的命令前，如 :grep、:vimgrep及 :make，设置全局标记的习惯。
+
