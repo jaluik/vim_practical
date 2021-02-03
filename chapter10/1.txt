@@ -1,0 +1,26 @@
+Practica lvim
+Practical vim 
+
+2)line two
+1)line one
+3)line three
+
+collection=getCollection();
+process(somethingInTheWay, target)
+
+d: delete
+y: yank 复制
+p: put 粘贴
+光标置于m 上时，
+F空格 光标会回退到空格上去
+x 剪切空格
+p 将剪切的东西粘贴到光标后面
+
+类似的可以使用dd 来剪切当前行
+这个过程会把无名寄存器的内容粘贴到当前行的下一行
+连起来 ddp 相当于调换当前行和他的下一行
+
+yyp 可以复制当前行，并将当前粘贴在下面
+
+yiw 可以将要复制的单词复制到寄存器里面
+diw 不仅会删除一个单词，还会把单词放到寄存器里面
