@@ -1,0 +1,13 @@
+I like chips and fish.
+
+如果要交换chips和fish
+
+首先 fc 光标置于chips的开头
+然后de 把chips 剪贴下
+mm 标记当前位置
+ww 光标移动到fish的位置
+ve 科室模式选中fish
+p 粘贴chips，此时会把fish存入无名寄存器里面
+`m 回答m标记的位置
+p 粘贴fish
+
