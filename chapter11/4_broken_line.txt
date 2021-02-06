@@ -1,0 +1,29 @@
+1. one
+2. two
+//break up the monotony
+3. three
+4. four
+
+目标：
+
+1) One
+2) Two
+//break up the monotony
+3) Three
+4) Four
+
+这里采用并行的方式
+
+qa
+0f.r)w~ 执行每一行的操作
+q
+jVG 进入可视模式并选中到末尾
+:'<,'>normal @a 可以对选中的内容执行宏命令
+
+============================
+
+如果宏录制完成后发现需要增加脚本，
+那么可以使用qA 来在a的寄存器上追加脚本
+
+注意 q后面应该对应原本寄存器的大写
+

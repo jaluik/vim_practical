@@ -1,0 +1,32 @@
+partridge in a pear tree
+turtle doves
+French hens
+calling birds
+golden rings
+
+目标：
+
+1)partridge in a pear tree
+2)turtle doves
+3)French hens
+4)calling birds
+5)golden rings
+
+:let i = 0
+:echo i
+此时会输出0
+
+如果在插入模式下，可以使用<C-r>=i<Enter> 来在插入模式中引入i的值
+
+此处的操作步骤
+:let i = 1
+qa
+I<C-r>=i<Enter>) [Esc]
+:let i+=1
+q
+
+这里录制完一个脚本
+jV4j 可以往下选中4行
+:'<,'>normal  @a 对选中的行执行宏命令
+
+
