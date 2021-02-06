@@ -1,4 +1,12 @@
 I like chips and fish.
+<table>
+
+	<tr>
+		<td>Symbol</td>
+		<td>Name</td>
+	</tr>
+
+</table>
 
 如果要交换chips和fish
 
@@ -10,4 +18,8 @@ ve 科室模式选中fish
 p 粘贴chips，此时会把fish存入无名寄存器里面
 `m 回答m标记的位置
 p 粘贴fish
+
+
+yap 复制一个段落
+gp  粘贴复制的段落
 
