@@ -1,0 +1,12 @@
+Aim to learn a new programming lang each year.
+Which lang did you pick up last year?
+Which langs would you like to learn?
+
+此时目标是把 lange 替换为language
+比如 :%s/lang/language/g
+
+也可以 /lang 让光标定位到第一个匹配的其实位置 然后输入 eauage<Esc>  ea用于在当前单词的末尾加入单词，此处是uage
+然后执行ne. 跳转到下一个匹配位置，然后e 跳到单词末尾，最后重复上一次操作
+
+甚至可以更直接的，使用/lang/e 来直接跳转到匹配单词的末尾   如果上次匹配的时候没有加/e 可以匹配完以后直接搜索 //e 来匹配在上一次匹配的基础上增加 /e 的匹配规则
+
