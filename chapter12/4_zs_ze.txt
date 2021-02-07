@@ -1,0 +1,45 @@
+Match "quoted words"---not quote marks
+
+\zs 表示高亮内容的开始位置
+\ze 表示高亮内容的结束位置
+
+比如此处
+/\v"[^"]+" 会匹配包括""及""以内的内容
+/\v"\zs[^"]+\ze" 只会匹配""里面的内容
+
+Search items: [http://vimdoc.net/search?q=/\\][s]
+...
+[s]: http://vimdoc.net/search?q=/\\
+
+
+"uyi[ 可以粘贴括号内的内容到u寄存器里面
+/\V<C-r>u<Enter> 可以拿取u寄存器的内容正则匹配模式中
+
+/  默认会被认为是查找域结束字符
+因此需要使用\/ 来代表/匹配的内容
+
+
+反向查找时，符号 ? 会被当作查找域的结束符。这意味着不必 转义符号 / 了，但要对符号 ? 进行转义。
+比如
+?http://vimdoc.net/search\?q=/\\
+
+
+可以使用vim自带的库函数来指定转义
+escape({string},{chars})
+
+{chars} 指定哪些字符需要\来进行转义
+
+比如
+escape(@u, '/\') 它会为每个/与\加上反斜杠前缀。
+
+如果执行的是反向查找，则需要对?和\进行转义，因此需要使用
+escapte(@u, '?\')
+
+
+实际操作为
+=escape(@u, getcmdtype().'\')  按下<Enter>后escape命令将会被执行
+
+getcmdtype() 会根据是否是正向查找返回不同的值；
+比如 正向查找getcmdtype().'\'将产生“/\”， 反向查找返回"?\"
+
+
