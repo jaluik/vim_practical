@@ -1,0 +1,6 @@
+She sells sea shells by the sea shore.
+默认情况下
+使用* 会匹配当前光标所在单词上的内容
+
+
+
