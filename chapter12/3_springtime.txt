@@ -1,0 +1,26 @@
+I love Paris in the the springtime.
+
+
+这里我们想匹配重复的the 单词
+使用正则
+/\v<(\w)\_s+\1>
+注意 \1 表示匹配的第一个括号
+\_s 会匹配空白符或者换行符
+< 和 > 用来匹配单词的边界 
+
+the problem with these new recruits is that
+they don't keep their boots clean.
+
+如果想匹配the 这个单词
+需要使用/\v<the> 这样才会筛选掉不需要的they这类匹配单词
+
+\w 匹配单词类字符 包括单词类字符、数字、_
+\W 匹配非\w的字符
+
+有时候想使用()来匹配字符，但是不关注匹配的子模式
+因此可以使用
+
+/\v%(And|D)rew Neil
+
+可以使用\W\ze\w 来模拟元字符 <
+\w\ze\W 来模拟元字符 >
