@@ -1,0 +1,14 @@
+...We're waiting for content before the site can go live...
+...If you are content with this, let's go ahead with it...
+...We'll launch as soon as we have the content...
+
+如果在匹配的flags中加入 c 那么，每个匹配项目都会询问是否替换。
+这里
+y: 替换单独匹配
+n: 跳过此处匹配
+q: 替换替换过程
+l: 替换此处后退出 “last"
+a: 替换此处与之后所有的匹配 "all"
+<C-e>  向上滚动屏幕
+<C-y>  向下滚动屏幕
+

@@ -1,0 +1,14 @@
+
+替换命令substitute 语法
+
+:[range]s[ubstitute]/{pattern}/{string}/[flags]
+
+其中flags的取值
+g: 全局搜索
+c: 可以确认或拒绝每一次修改
+n: 抑制正常的修改行为
+&: 重用上一次替换命令使用的标志位
+
+\={Vim script} 执行vim表达式，并将结果作为替换域中的{string}使用
+
+

@@ -1,0 +1,12 @@
+When the going gets tough, the tough get going.
+If you are going through hell, keep going.
+
+现在想将going 改为rolling
+
+首先highlightSearch
+
+:set hlsearch
+
+:%s/going/rolling/g
+其中% 用于控制所有行， g 控制当前行的所有位置
+
