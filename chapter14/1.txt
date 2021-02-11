@@ -1,6 +1,4 @@
-
 替换命令substitute 语法
-
 :[range]s[ubstitute]/{pattern}/{string}/[flags]
 
 其中flags的取值
