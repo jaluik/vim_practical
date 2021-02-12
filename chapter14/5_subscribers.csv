@@ -1,0 +1,12 @@
+last name,first name,email
+neil,drew,drew@vimcasts.org
+doe,john,john@example.com
+
+期望结果为
+email,first name,last name
+drew@vimcasts.org,drew,neil
+john@example.com,john,doe
+
+替换命令为
+/\v^([^,]*),([^,]*),([^,]*)$
+:%s//\3,\2\1
