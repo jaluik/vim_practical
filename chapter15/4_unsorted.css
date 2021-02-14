@@ -1,0 +1,26 @@
+html{
+	margin: 0; 
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+body{
+	line-height: 1.5;
+	color: black;
+	background: white;
+}
+目标是：
+将css的属性名进行排序
+
+如果是只针对一个括号的内容进行排序：
+首先将光标置于{}内， 使用vi{ 可以选中{}的所有内容
+然后执行:'<,'>sort 会把选中的内容按照字母顺序进行排序
+
+如果是想对文件中所有属性的规则进行排序，则执行
+:g/{/ .+1,/}/-1 sort
+
+理由在于:g/{start}/ .,{finish} [cmd]
+可以理解为对从 {start} 开始，到 {finish} 结束的所有文 本行，执行指定的 [cmd]
+其中+1 表示向下偏移1  -1表示向上偏移1
