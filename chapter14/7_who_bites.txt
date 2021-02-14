@@ -1,0 +1,23 @@
+The dog bit the man.
+
+目标是把 man 和dog 替换
+首先定义一个字典函数
+:let swapper={"dog":"man","man":"dog"}
+:echo swapper["dog"]  将dog作为字典值会返回man
+
+submatch()的作用在于在vim脚本中获取匹配到的分组
+这里使用 :%s//\={"dog":"man","man":"dog"}[submatch(1)]/g
+
+
+==========================
+/Pragmatic\ze Vim
+这里用于匹配Pragmatic Vim 然后替换的话只会替换Pragmatic
+
+:vimgrep // **/*.txt
+其中:vimgrep 表示在当前工程域中查找 // 表示使用当前的查找模式
+:cfdo %s//Practical/gc
+cfdo 表示在工程域中操作执行后面的替换命令
+:cfdo update
+用于保存更新结果
+在vim中 | 用于命令分隔符，
+
