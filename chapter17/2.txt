@@ -1,0 +1,28 @@
+:make 命令可以调用外部的命令来验证文件
+比如
+:setlocal makeprg=NODE_DISABLE_COLORS=1\ nodelint\ %
+其中makeprg选项指定vim运行nodelint命令
+% 将被扩展成当前文件所在的路径。
+
+如果当前文件的命令所在的位置在~/quickfix/fizzbuzz.js
+那么执行 :setlocal makeprg=NODE_DISABLE_COLORS=1\ nodelint\ %
+相当于执行了
+在shell中执行了以下命令
+export NODE_DISABLE_COLORS=1
+nodelint ~/quickfix/fizzbuzz.js
+
+接下来需要正确的配置vim的errorformat来让vim正确解析错误信息
+===================
+:setglobal errorformat?
+可以查看vim中默认的错误解析配置:
+errorformat=%*[^"]"%f"%*\D%l: %m,"%f"%*\D%l: ....
+其中%f表示文件名，%l表示行号，%m表示错误信息
+因此 针对nodelint 可以重新设置 errorformat（简写为efm)
+:setglobal efm=%A%f\,\ line\ %l\,\ character\ %c:%m,%Z%.%#,%-G%.%#
+
+
+===================
+上面的操作可以通过:compiler 命令进行保存起来（封装了'makeprg'以及'errorformat'）
+
+
+

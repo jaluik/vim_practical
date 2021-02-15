@@ -1,0 +1,33 @@
+进入vim以后，如果需要进行编译
+可以在vim 中执行:make vim会编译当前文件
+
+如果出现错误，vim会把错误信息放入到quickfix列表里面
+并且会自动跳到quickfix的第一项记录中
+利用:cnext 可以跳转到下一个出错位置中
+
+如果执行:make! 那么如果出现错误的话，vim将不会自动跳转到第一处错误去
+! 的作用在于告诉vim 只需要更新quickfix，不需要进行跳转
+
+
+======================
+浏览quickfix列表
+:cnext  下一项
+:cprev  上一项
+:cfirst 第一项
+:clast  最后一项
+:cnfile 跳转到下一文件的第一项
+:cpfile 跳转到上一文件的最后一项
+:cc N   跳转到第n项
+:copen  打开quickfix窗口
+:cclose 关闭quickfix窗口
+:cdo {cmd} 在quickfix中的每一项执行cmd命令
+:cfdo {cmd} 在quickfix中的每一个文件执行cmd命令
+:colder  可以回溯到quickfix之前的某个版本
+:cnewer  可以回到比较新的列表
+
+
+可以在执行前增加执行次数，比如:5cnext 将会执行5次cnext
+
+=======================
+:make 需要vim配置外部编译器
+
