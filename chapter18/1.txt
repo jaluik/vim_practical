@@ -1,0 +1,41 @@
+grep 如果想在当前目录的所有文件中，查找Waldo，则可以在shell中执行
+grep -n Waldo *
+其中-n 表示显示行号
+
+tips:
+vim goldrush.txt +9
+其中 +9 表示打开文件后跳转到第9行
+
+-------------
+也可以直接在vim中调用:grep 命令
+:grep Waldo * 
+执行此命令以后，相当于执行在shell中执行 :grep -n Waldo *  并且会在quickfix中生成结果列表
+
+如果想greo 命令不区分大小写，则可以加上-i 参数
+
+====================
+vim中的grep命令是外部 grep程序的包装，配置'grepprg'和'grepformat'选项可以对grep命令进行定制
+其中：
+grepprg 负责调用shell程序
+grepformat 负责解析grep命令的输出结果
+缺省参数为:
+grepprg="grep -n $* /dev/null"
+grepformat="%f:%l:%m,%f:%l%m,%f %l%m"
+$* 表示占位符， 后面会被:grep命令的参数所替代
+
+====================
+:vim[grep][!] /{pattern}/[g][j] {file} …
+可以指定查找哪些文件
+如果不加g，则会默认显示第一个匹配项
+如
+:vim /going/g *.txt
+
+会在当前项目中的txt文件中，查找going的内容，并把匹配结果放入quickfix中
+
+除了可以使用和*通配符外，也可以使用##符号，它将被扩展成参 数列表中的所有文件（:h cmdline-special ）
+比如
+:args *.txt
+:vim /going/g ##
+
+当然匹配模式可以为空，表示使用之前的匹配模式
+
