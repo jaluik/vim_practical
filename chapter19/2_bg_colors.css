@@ -1,0 +1,19 @@
+:set spell 可以开启字典自动补全的功能
+然后执行<C-x><C-k> 命令可以触发此功能
+
+===========================
+
+.top {
+	background-color: #ef66ef; }
+.bottom {
+
+目标为：
+.top {
+	background-color: #ef66ef; }
+.bottom {
+background-color: #ef66ef; }
+
+光标置于bottom单词上的时候
+执行 oba
+然后执行 <C-x><C-l><Esc> 会把内容top内容行的内容自动补全到新输入的行里面
+

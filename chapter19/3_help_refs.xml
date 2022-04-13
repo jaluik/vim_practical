@@ -1,0 +1,15 @@
+Here's the "hyperlink" for the Vim tutor:
+<vimref href="http://vimhelp.appspot.com/usr_01.txt.html#tutor">tutor</vimref>
+For more information on autocompletion see:
+<vimr
+
+目标是补全最后一行<vimr
+
+方式是使用a进入插入模式以后，通过不停循环<C-x><C-p>命令来一点点的补全vimref的内容 
+
+
+===============
+输入<C-n><C-f> 命令可以自动补全文件名
+:pwd 可以查看当前文件目录
+:cd 可以切换当前工作的文化目录
+:cd - 可以回到之前的工作目录
